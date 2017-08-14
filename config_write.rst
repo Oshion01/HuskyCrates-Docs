@@ -11,7 +11,7 @@ Starting Out
 We suggest using an app such as Sublime Text which has a HOCON module that can aid you in properly formatting your config files.
 
 **Very important:** Please make sure you save your config in UTF-8 ecoding the *first* time you save! It will prevent a lot of potential problems for your config.
-Please note that HOCON does sort everything within 
+Please note that HOCON does sort everything within ladders alphabetically.
 
 Your first line of every config is always going to be ``crates {``. This is necessasry to indicate that this is crates information
 The next line is where your first crate is initiated this is your ``crate_id`` which you will use to call your crates in commands. Give it an easy to type name and type on the next line your ``<crate_id> {``.
@@ -132,4 +132,77 @@ Weight
 
 This is your probability for a reward inside a specific crate. The sum of your weights doesn't have to equate 100. The smaller the number the more rare an item will become to rewarded.
 
-*Weight is not inside of huskydata it should not be in the same ladder as rewards.
+*Weight is not inside of huskydata it should not be in the same ladder as rewards.*
+
+===============
+Lang (Optional)
+===============
+
+`Look here for how to use lang`_
+
+.. _Look here for how to use lang: http://com.com/
+
+-------------------
+NBT Tags (Optional)
+-------------------
+
+::
+
+    nbt {
+        your_fancy_tag {
+            your_fancy_field = <your_fancy_value>
+        }
+    }
+
+To use NBT tags with husky crates simply put all the necessary tags in the proper format.
+
+---------------
+Lore (Optional)
+---------------
+
+::
+
+    lore=[
+    "<some text describing the item>"
+    ]
+
+Lore describes the item the user gets showing in the tooltip when hovering over the item in the menu. Lore is an array like items and rewards, each line should be in its own quote.
+
+-------------------
+Enchants (Optional)
+-------------------
+
+::
+
+    enchants {
+        <enchantment>=<int>
+    }
+
+Place this in any item you want enchanted with the type of enchantment and the level.
+
+----
+Name
+----
+
+``name="<item name>"``
+
+You must give the item a name to be displayed as in their inventory, you can use color codes using the & symbol the § is heavily unrecommended.
+
+-----------------------
+**Adding more rewards**
+-----------------------
+
+If you want to add another reward after name do the following below,::
+
+    },
+    {
+
+and repeat steps from `count`_
+otherwise do the following,::
+
+    }
+    ]
+
+and continue downwards.
+
+.. _count: http://huskycrates.readthedocs.io/en/1.7.x/config_write.html#count
