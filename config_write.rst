@@ -52,9 +52,9 @@ Damage (Optional)
 
 Optional for the damage value of your item given.
 
-=========
+#########
 Huskydata
-=========
+#########
 
 Huskydata is where all information in the scope of crate rewarding happens. Nothing in terms of inventory apperance is here yet.::
 
