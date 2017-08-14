@@ -6,7 +6,7 @@ Commands & Permissions
 ``/crate chest <id> [player]``
 
 * Gives the placeable crate item
-* Persmission ``huskycrates.chest``
+* Permission ``huskycrates.chest``
 
 ``/crate key <id> [player] [amount]``
 
