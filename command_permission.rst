@@ -41,7 +41,7 @@ Commands & Permissions
 ``/crate wand <id>``
 
 * Gives you a wand, for use in turning entities into HuskyCrates
-* Go up to the entity of your choice *even moving entities!)
+* Go up to the entity of your choice (even moving entities!)
 * Right click on the entity with the wand.
 * To remove crate status just right click again.
 * Permission: ``huskycrates.wand``
