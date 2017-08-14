@@ -28,33 +28,33 @@ The first and most important part of a crate is its items, items are an array wh
 
 The open brace marks your first reward that can be given in your crate. To add another reward, once you're done add a comma after the closing brace.
 
-=====
-Count
-=====
+-----
+count
+-----
 
 ``count=<int>``
 
 Your count dictates how many of an item are given to the player. If your item is a command this should be set to 1.
 
-==============
+--------------
 Format Version
-==============
+--------------
 
 ``formatversion=1``
 
 Absolutely necessary in every item.
 
-=================
+-----------------
 Damage (Optional)
-=================
+-----------------
 
 ``damage=<int>``
 
 Optional for the damage value of your item given.
 
----------
+#########
 Huskydata
----------
+#########
 
 Huskydata is where all information in the scope of crate rewarding happens. Nothing in terms of inventory apperance is here yet.::
 
