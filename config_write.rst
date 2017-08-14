@@ -52,9 +52,9 @@ Damage (Optional)
 
 Optional for the damage value of your item given.
 
-#########
+---------
 Huskydata
-#########
+---------
 
 Huskydata is where all information in the scope of crate rewarding happens. Nothing in terms of inventory apperance is here yet.::
 
@@ -62,6 +62,10 @@ Huskydata is where all information in the scope of crate rewarding happens. Noth
         rewards=[
 
 Note that rewards is an array like items is, this allows you to give more than one item or run multiple commands when the crate is opened.
+
+=======
+Rewards
+=======
 
 **There are two ways you can do rewards**
 
@@ -73,3 +77,59 @@ Note that rewards is an array like items is, this allows you to give more than o
 |                 |``type=command`` |
 +-----------------+-----------------+
 
+^^^^^^^^^^^^^^^^^^^^^^^^
+Override Item (Optional)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want your item to be displayed as something else inside your crate use overrideItem.::
+    
+    overrideItem {
+        id="<item_id>"
+        count=<int>
+        name="<name>"
+        lore=[
+            "<lore>"
+        ]
+    }
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Override Reward Name (Optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``overrideRewardName="<string>"``
+
+Optional to change the name shown for a reward.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Override Count (Optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``overrideCount=<int>``
+
+Optional to change the amount of items given for a reward. This 
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Treat as Single (Optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``treatAsSingle=true``
+
+Optional to have grammar for items with more than one appear as if the item was singular.
+
+^^^^^^^^^^^^^^^^^^^
+Announce (Optional)
+^^^^^^^^^^^^^^^^^^^
+
+``announce=true``
+
+Optional to have a specific reward be announced on the server.
+
+======
+Weight
+======
+
+``weight=<int>``
+
+This is your probability for a reward inside a specific crate. The sum of your weights doesn't have to equate 100. The smaller the number the more rare an item will become to rewarded.
+
+*Weight is not inside of huskydata it should not be in the same ladder as rewards.
