@@ -33,12 +33,12 @@ Commands & Permissions
 * Check your current virtual key balance
 * Permission ``huskycrates.keybal.self``
 
-``/crate keybal <player>
+``/crate keybal <player>``
 
 * Check someone else's current virtual key balance
 * Permission: ``huskycrates.keybal.others``
 
-``/crate wand <id>
+``/crate wand <id>``
 
 * Gives you a wand, for use in turning entities into HuskyCrates
 * Go up to the entity of your choice *even moving entities!)
