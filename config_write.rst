@@ -312,10 +312,12 @@ Crate Types
 ``type="<options_below>"``
 
 *Spinner View* ``spinner`` - Traditional HuskyCrates view, similar to CS:GO case. Items scroll randomly until an item is picked, `spinner view is customizeable.`_
+
 .. image:: spinner.png
     :width: 350px
 
 *Roulette View* ``roulette`` - You have 10 seconds to make a selection, weight still affects how often items appear.
+
 .. image:: roulette.png
     :width: 350px
 
