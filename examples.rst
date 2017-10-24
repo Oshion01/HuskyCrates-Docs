@@ -6,7 +6,7 @@ Examples
 
 
 ^^^^^^^^^^^^^^^^^^^
-State Of Sponge XIV Config
+Fake State Of Sponge XIV Config
 ^^^^^^^^^^^^^^^^^^^
 
 ::
