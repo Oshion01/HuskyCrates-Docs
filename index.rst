@@ -26,6 +26,7 @@ This plugin has an auto notifier that lets you know when there is a new release 
    faq
    known_issues
    using_tools
+   examples
 
 Indices and tables
 ==================
