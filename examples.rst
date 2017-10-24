@@ -2,6 +2,6 @@
 
 Examples
 ===============================
-.. image:: http://i.imgur.com/ZRN1RVN.png
+
 
 
