@@ -4,6 +4,308 @@
 Examples
 ===============================
 
+^^^^^^^^^^^^^^^^^^^
+Simple crates
+^^^^^^^^^^^^^^^^^^^
+
+::
+
+    crates {
+        command {
+            items=[
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            command="give %p minecraft:diamond 10"
+                            overrideRewardName="Diamond Box"
+                            type=command
+                        }
+                        weight=1
+                    }
+                    id="minecraft:stone"
+                    lore=[
+                        "10 Minecraft Diamond"
+                    ]
+                    name="Diamond Box"
+                    type=Spinner
+                },
+                {
+                    count=2
+                    damage=3
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            command="say %p is a potato."
+                            overrideRewardName=BLAM
+                            type=command
+                        }
+                        weight=1
+                    }
+                    id="minecraft:planks"
+                    lore=[
+                        Speakerbox
+                    ]
+                    name=BLAM
+                },
+                {
+                    count=3
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            command="crate key command %p"
+                            overrideRewardName="be a sore loser"
+                            type=command
+                        }
+                        weight=1
+                    }
+                    id="minecraft:stone"
+                    lore=[
+                        "try again BOI"
+                    ]
+                    name="&4be a sore loser"
+                },
+                {
+                    count=4
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            command="say meh"
+                            overrideRewardName=trash
+                            type=command
+                        }
+                        weight=1
+                    }
+                    id="minecraft:dirt"
+                    lore=[
+                        "10 Minecraft Diamond"
+                    ]
+                    name=trash
+                }
+            ]
+            name="&3Command Crate"
+            options {
+                keyID="minecraft:dirt"
+                particle1 {
+                    color=[
+                        #                                              red 
+                        97,
+                        #                                              green 
+                        186,
+                        #                                              blue
+                        39
+                    ]
+                }
+                particle2 {
+                    color=[
+                        255,
+                        0,
+                        255
+                    ]
+                }
+            }
+            spinnerOptions {
+                dampening=1.025
+                maxClickModifier=3
+                maxClicks=100
+                minClickModifier=-3
+            }
+            type=Spinner
+        }
+        fancy {
+            items=[
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=5
+                    }
+                    id="minecraft:diamond"
+                    name="minecraft:diamond"
+                },
+                {
+                    count=15
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=20
+                    }
+                    id="minecraft:dirt"
+                    name="minecraft:dirt"
+                },
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=1
+                    }
+                    id="minecraft:cobblestone"
+                    lore=[
+                        "He once was a spooky stones."
+                    ]
+                    name="&3Stoned the Stones"
+                },
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=1
+                    }
+                    id="minecraft:planks"
+                    lore=[
+                        ":)"
+                    ]
+                    name="&6Pre-cut wood"
+                },
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=1
+                    }
+                    id="minecraft:diamond_sword"
+                    lore=[
+                        "idk someone gave it to me."
+                    ]
+                    name="&cFancy sword"
+                }
+            ]
+            name="&bFancy Cool Crate"
+            options {
+                particle1 {
+                    color=[
+                        #                                              red 
+                        0,
+                        #                                              green 
+                        255,
+                        #                                              blue
+                        255
+                    ]
+                }
+                particle2 {
+                    color=[
+                        255,
+                        255,
+                        0
+                    ]
+                }
+            }
+            type=Spinner
+        }
+        mining {
+            items=[
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=5
+                    }
+                    id="minecraft:diamond"
+                    name="minecraft:diamond"
+                },
+                {
+                    count=15
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=20
+                    }
+                    id="minecraft:dirt"
+                    name="minecraft:dirt"
+                },
+                {
+                    count=1
+                    enchants {
+                        sharpness=255
+                    }
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=1000
+                    }
+                    id="minecraft:cobblestone"
+                    lore=[
+                        "He once was a spooky stones."
+                    ]
+                    name="&3Stoned the Stones"
+                },
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=1
+                    }
+                    id="minecraft:planks"
+                    lore=[
+                        ":)"
+                    ]
+                    name="&6Pre-cut wood"
+                },
+                {
+                    count=1
+                    formatversion=1
+                    huskydata {
+                        reward {
+                            type=item
+                        }
+                        weight=1
+                    }
+                    id="minecraft:diamond_sword"
+                    lore=[
+                        "idk someone gave it to me."
+                    ]
+                    name="&cFancy sword"
+                }
+            ]
+            name="§8Mining Crate"
+            options {
+                particle1 {
+                    color=[
+                        #                                              red 
+                        175,
+                        #                                              green 
+                        175,
+                        #                                              blue
+                        175
+                    ]
+                }
+                particle2 {
+                    color=[
+                        255,
+                        0,
+                        0
+                    ]
+                }
+            }
+            type=Spinner
+        }
+    }
+
 
 ^^^^^^^^^^^^^^^^^^^
 Fake State Of Sponge XIV Config
