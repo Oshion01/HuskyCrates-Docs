@@ -4,6 +4,8 @@
 Examples
 ===============================
 
+**Please note that these examples need to be updated with the new reward format which allows for multiple rewards.**
+
 ^^^^^^^^^^^^^^^^^^^
 Simple crates
 ^^^^^^^^^^^^^^^^^^^
