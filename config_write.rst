@@ -255,6 +255,14 @@ CrateBlockID (Optional)
 
 Changes the block and appearence of a specific crate.
 
+-----------------------
+ShowRewardsOnLeft (Optional)
+-----------------------
+
+``showRewardsOnLeft=true``
+
+Allows users to see potential rewards on primary action (punching the chest)
+
 --------------------------
 Particle Colors (Optional)
 --------------------------
