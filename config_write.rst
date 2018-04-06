@@ -1,6 +1,7 @@
 .. HuskyCrates - Last updated v1.7.2
+.. highlight:: none
 
-Plugin Configuration
+Configuration
 ===============================
 .. image:: http://i.imgur.com/ZRN1RVN.png
 
@@ -17,9 +18,185 @@ We suggest using an app such as Sublime Text which has a HOCON module that can a
 **Very important:** Please make sure you save your config in UTF-8 ecoding the *first* time you save! It will prevent a lot of potential problems for your config.
 Please note that HOCON does sort everything within ladders alphabetically.
 
-Your first line of every config is always going to be ``crates {``. This is necessasry to indicate that this is crates information
-The next line is where your first crate is initiated this is your ``crate_id`` which you will use to call your crates in commands. Give it an easy to type name and type on the next line your ``<crate_id> {``.
-You can have as many crates as you want but lets make your first crate.
+***********
+Terminology
+***********
+
+**List, Map or Dictionary**
+This has to do with
+
+****************
+huskycrates.conf
+****************
+
+::
+	# Message configuration.
+	# If you used HuskyCrates 1.x, this is like lang{}
+	# Here you set messages for the whole plugin.
+	messages {
+	    balanceCommand { # Messages pertaining to the balance command.
+	        balanceRow="&7 - {key}&r&7: &a{amount}"
+	        noBalanceEntries="&7This user has no balances."
+	        noValidUser="&cNo valid user found to list the balance of."
+	        otherBalanceHeader="&6{player}'s Key Balances"
+	        selfBalanceHeader="&aYour Key Balances"
+	        userNotExist="&c{username} has never logged into this server."
+	        uuidBalanceHeader="&2Balance for {uuid}"
+	    }
+	    blockCommand { # Messages pertaining to the block command (/hc block)
+	        itemOnlyFailure="&cThe block you supplied could not be converted to an item. Please try again with a different block."
+	        noPlayersFound="&cNo valid players could be found to give a crate placement block to."
+	    }
+	    crate { # Messages involving a crate or crate related events.
+	        rejectionCooldown="&cYou currently have {cooldown.remaining} second{cooldown.remaining.plural} out of {cooldown.total} remaining left in your cooldown."
+	        rejectionNeedKey="&cYou need {key.0.amountRequired} {key.0.name}&r&c to use this crate."
+	        virtualKeyConsumed="&eYou just used {amount} {key}{amount.plural}&r&e from your key balance. You have {amountRemaining} {key}&r&e{amountRemaining.plural} left."
+	    }
+	    keyCommand { # Messages related to the key command (/hc key)
+	        crateKeyVirtual="&cThe resolved key is virtual only. Please supply a key that can be a physical item, or use the \"v\" flag."
+	        crateNoLocalKey="&cThe supplied crate did not have a local key."
+	        keyDeliveryFail="&c{player} failed to receive their {amount} key{amount.plural}!"
+	        keyDeliverySuccess="&a{player} received {amount} key{amount.plural}."
+	        massKeyDeliverySuccess="&a{playerAmount} player{playerAmount.plural} received {amount} key{amount.plural}."
+	        noPlayersFound="&cNo valid players could be found to deliver keys to."
+	        receivedKey="&aYou received {amount} {key}{amount.plural}&r!"
+	        selfKeyDeliveryFail="&cFailed to give you keys!"
+	        selfKeyDeliverySuccess="&aYou were given {amount} key{amount.plural}."
+	    }
+	}
+
+	# The entry below defines if keys will be checked for uniqueness or not. Enabling this after
+	# crating keys with it enabled will cause problems.
+	secureKeys=true
+
+***********
+crates.conf
+***********
+::
+	# You can define crates inside of crates.conf.
+	command {
+	    cooldownSeconds=0
+	    effects {
+	        idle {
+	            particles=[
+	                {
+	                    animationPreset=orbit
+	                    color=[
+	                        0,
+	                        255,
+	                        0
+	                    ]
+	                    type="minecraft:redstone_dust"
+	                },
+	                {
+	                    animationPreset=counterorbit
+	                    color=[
+	                        255,
+	                        0,
+	                        255
+	                    ]
+	                    type="minecraft:redstone_dust"
+	                }
+	            ]
+	        }
+	    }
+	    free=false
+	    hologram {
+	        lines=[
+	            "&3Command Crate"
+	        ]
+	    }
+	    localKey {
+	        id="minecraft:dirt"
+	        name="&3Command Crate&r Key"
+	    }
+	    name="&3Command Crate"
+	    slots=[
+	        {
+	            chance=1.0
+	            displayItem {
+	                count=1
+	                id="minecraft:diamond"
+	                lore=[
+	                    "10 Minecraft Diamond"
+	                ]
+	                name="Diamond Box"
+	            }
+	            rewards=[
+	                {
+	                    data="give %p minecraft:diamond 10"
+	                    type=servercommand
+	                }
+	            ]
+	        },
+	        {
+	            chance=1.0
+	            displayItem {
+	                count=2
+	                id="minecraft:planks"
+	                lore=[
+	                    Speakerbox
+	                ]
+	                name=BLAM
+	            }
+	            rewards=[
+	                {
+	                    data="say %p is a potato."
+	                    type=servercommand
+	                },
+	                {
+	                    type=key
+	                    data="LOCALKEY_command"
+	                    keyCount=5
+	                }
+	            ]
+	        },
+	        {
+	            chance=1.0
+	            displayItem {
+	                count=3
+	                id="minecraft:stone"
+	                lore=[
+	                    "try again BOI"
+	                ]
+	                name="&4be a sore loser"
+	            }
+	            rewards=[
+	                {
+	                    data="say reeee"
+	                    type=servercommand
+	                }
+	            ]
+	        },
+	        {
+	            chance=1.0
+	            displayItem {
+	                count=4
+	                id="minecraft:dirt"
+	                lore=[
+	                    "10 Minecraft Diamond"
+	                ]
+	                name=trash
+	            }
+	            rewards=[
+	                {
+	                    data="say meh"
+	                    type=servercommand
+	                }
+	            ]
+	        }
+	    ]
+	    useLocalKey=true
+	    viewOptions {
+	        tickDelayMultiplier=1.025
+	        ticksToSelection=100
+	        ticksToSelectionVariance=3
+	    }
+	    viewType=roulette
+	    messages {
+	        rejectionNeedKey="you need a key you dummy."
+	    }
+	}
 
 ***********
 Crate Types
