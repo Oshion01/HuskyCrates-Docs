@@ -18,7 +18,7 @@ This plugin has an auto notifier that lets you know when there is a new release 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Details
 
    getting_started
    command_permission
