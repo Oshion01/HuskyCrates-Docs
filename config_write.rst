@@ -30,6 +30,7 @@ huskycrates.conf
 ****************
 
 ::
+
 	# Message configuration.
 	# If you used HuskyCrates 1.x, this is like lang{}
 	# Here you set messages for the whole plugin.
@@ -73,6 +74,7 @@ huskycrates.conf
 crates.conf
 ***********
 ::
+
 	# You can define crates inside of crates.conf.
 	command {
 	    cooldownSeconds=0
