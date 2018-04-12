@@ -5,6 +5,9 @@
 
 Welcome to HuskyCrates documentation!
 =====================================================
+******
+THIS DOCUMENTATION IS A WORK-IN-PROGRESS THEREFORE IT IS NOT COMPLETE
+******
 
 HuskyCrates is a multipurpose easy to use crate reward system for Sponge.
 
